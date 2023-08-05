@@ -10,10 +10,9 @@
 #   - board: bdn9_rev2
 #   - board: nice_nano_v2
 #     shield: reviung41
+---
 include:
     - board: seeeduino_xiao_ble
       shield: chipper_left
     - board: seeeduino_xiao_ble
       shield: chipper_right
-    
----
