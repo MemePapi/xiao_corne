@@ -12,5 +12,8 @@
 #     shield: reviung41
 include:
     - board: seeeduino_xiao_ble
-      shield: chipper
+      shield: chipper_left
+    - board: seeeduino_xiao_ble
+      shield: chipper_right
+    
 ---
