@@ -12,10 +12,10 @@
 #define COMBO_TIMEOUT 60
 
 #define DEFAULT 0
-#define LOWER   1
+#define NAV   1
 #define RAISE   2
 #define DANGER  3
-#define NAV     4
+#define NUM     4
 
 / {
     macros {
@@ -136,12 +136,12 @@
                 lower_layer {
 //L 1
                         bindings = <
-   &bt BT_SEL 0 &bt BT_SEL 1 &kp UP       &bt BT_SEL 2 &bt BT_CLR     &kp PG_UP     &kp N7  &kp N8       &kp N9  &kp BSPC
-   &kp F2       &kp LEFT     &kp DOWN     &kp RIGHT    &hm LGUI F6    &kp PG_DN     &kp N4  &kp N5       &kp N6  &kp BSLH
-   &kp F7       &kp F8       &kp F10      &kp F11      &kp F12        &kp INS       &kp N1  &kp N2       &kp N3  &kp LC(RET)
-               	&kp LC(LA(LSHFT)) &trans  &mt RALT RET                &mt LCTRL F1  &kp N0  &mt LSHFT DOT
+   &bt BT_SEL 0 &bt BT_SEL 1 &kp UP       &bt BT_SEL 2 &bt BT_CLR     &trans       &trans     &kp N8          &kp N9    &kp BSPC
+   &kp F2       &kp LEFT     &kp DOWN     &kp RIGHT    &hm LGUI F6    &trans       &kp LSHFT  &kp LCTRL       &kp LALT  &kp LGUI
+   &kp F7       &kp F8       &kp F10      &kp F11      &kp F12        &trans       &trans     &trans          &kp RALT  &trans
+               	&kp LC(LA(LSHFT)) &trans  &mt RALT RET                   &mt LCTRL F1  &kp N0  &mt LSHFT DOT
                         >;
-		label = "LOWER";
+		label = "NAV";
                 };
 
                 raise_layer {
@@ -174,7 +174,7 @@
    &kp F7       &kp F8       &kp F10      &kp F11      &kp F12             &kp INS   &kp N1 &kp N2 &kp N3  &kp LC(RET)
                 &kp LC(LA(LSHFT)) &trans  &mt RALT RET                     &mt LCTRL F1  &kp N0  &mt LSHFT DOT
                         >;
-		label = "NAV";
+		label = "NUM";
                 };
         };
 };
