@@ -89,7 +89,7 @@
 			compatible = "zmk,behavior-hold-tap";
 			label = "Layer-Tap";
 			#binding-cells = <2>;
-			tapping_term_ms = <500>;
+			tapping_term_ms = <130>;
             flavor = "tap-preferred";
 			bindings = <&mo>, <&kp>;
         };
@@ -129,12 +129,12 @@
    &kp Q       &kp W        &kp E        &kp R        &kp T        &kp Y     &kp U          &kp I         &kp O        &kp P
    &bh 1 A     &mt LALT S   &mt LCTRL D  &mt LSHFT F  &kp G        &kp H     &mt RSHFT J    &mt LCTRL K   &mt LALT L   &kp SQT
    &mt LCTRL Z &kp X        &kp C        &kp V        &kp B        &kp N     &kp M          &kp COMMA     &kp DOT      &mt RSHFT FSLH
-               &kp ESC &bh 1 RET &mt LSHFT TAB            &kp BSPC &bh 2 SPACE &mt RALT DEL
+               &kp ESC &bh 1 RET &mt LSHFT TAB            &kp BSPC &bh 2 SPACE &bh 4 DEL
                         >;
 		label = "BASE";
                 };
                 lower_layer {
-
+//L 1
                         bindings = <
    &bt BT_SEL 0 &bt BT_SEL 1 &kp UP       &bt BT_SEL 2 &bt BT_CLR     &kp PG_UP     &kp N7  &kp N8       &kp N9  &kp BSPC
    &kp F2       &kp LEFT     &kp DOWN     &kp RIGHT    &hm LGUI F6    &kp PG_DN     &kp N4  &kp N5       &kp N6  &kp BSLH
@@ -145,7 +145,7 @@
                 };
 
                 raise_layer {
-
+//L 2
                         bindings = <
    &kp EXCL  &kp AT    &kp HASH    &kp DLLR     &kp PRCNT     &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR 
    &kp TAB   &kp CAPS  &kp F13     &out OUT_TOG &kp LGUI      &kp MINUS &kp EQUAL &kp LBRC &kp RBRC &kp PIPE 
@@ -156,7 +156,7 @@
 		};
 		
 		danger_layer {
-
+//L 3
                         bindings = <
    &bootloader  &kp AT &kp HASH       &kp PAUSE_BREAK &kp SLCK              &kp C_VOL_UP       &hm LC(V) LC(C)      &hello &kp LC(LA(DEL)) &bootloader 
    &trans       &trans &kp LC(LSHFT)  &mt LSHFT UP    &mt LCTRL PSCRN       &kp C_VOL_DN       &trans &trans        &kp UP &kp SEMI 
@@ -167,7 +167,7 @@
                 };
 
                 nav_layer {
-
+//L4
                         bindings = <
    &bt BT_SEL 0 &bt BT_SEL 1 &kp UP       &bt BT_SEL 2 &bt BT_CLR          &kp PG_UP &kp N7 &kp N8 &kp N9  &kp BSPC
    &kp F2       &kp LEFT     &kp DOWN     &kp RIGHT    &hm LGUI F6         &kp PG_DN &kp N4 &kp N5 &kp N6  &kp BSLH
