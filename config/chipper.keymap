@@ -126,10 +126,10 @@
 // |  Z  |  X  |  C  |  V  |  B          |   |  N  |  M        |  ,      |  .  |  /  | 
 //             | GUI | LWR |  BSPC/LSHFT |   | SPC | RSE/BSPC  | ENT/ALT |
                         bindings = <
-   &kp Q       &kp W    &kp E      &kp R &kp T        &kp Y     &kp U      &kp I         &kp O   &kp P
-   &bh 1 A     &kp S    &kp D      &kp F &kp G        &kp H     &kp J      &kp K         &kp L   &kp SQT
-   &mt LCTRL Z &kp X    &kp C      &kp V &kp B        &kp N     &kp M      &kp COMMA     &kp DOT &mt RSHFT FSLH
-               &kp LGUI &bh 1 HOME &mt LSHFT BSPC     &kp SPACE &bh 2 BSPC &mt RALT RET
+   &kp Q       &kp W        &kp E        &kp R        &kp T        &kp Y     &kp U          &kp I         &kp O        &kp P
+   &bh 1 A     &mt LALT S   &mt LCTRL D  &mt LSHFT F  &kp G        &kp H     &mt RSHFT J    &mt LCTRL K   &mt LALT L   &kp SQT
+   &mt LCTRL Z &kp X        &kp C        &kp V        &kp B        &kp N     &kp M          &kp COMMA     &kp DOT      &mt RSHFT FSLH
+               &kp ESC &bh 1 RET &mt LSHFT TAB            &kp BSPC &bh 2 SPACE &mt RALT DEL
                         >;
 		label = "BASE";
                 };
@@ -141,7 +141,7 @@
    &kp F7       &kp F8       &kp F10      &kp F11      &kp F12        &kp INS       &kp N1  &kp N2       &kp N3  &kp LC(RET)
                	&kp LC(LA(LSHFT)) &trans  &mt RALT RET                &mt LCTRL F1  &kp N0  &mt LSHFT DOT
                         >;
-		label = "Numbers";
+		label = "LOWER";
                 };
 
                 raise_layer {
@@ -152,7 +152,7 @@
    &kp ESC   &kp GRAVE &kp QMARK   &kp F9       &kp F17       &kp UNDER &kp PLUS  &kp LBKT &kp RBKT &kp BSLH 
              &kp LCTRL &kp LALT    &mt LSHFT LS(INS)          &kp RET   &trans    &mt RALT TILDE
                         >;
-		label = "Symbols";
+		label = "RAISE";
 		};
 		
 		danger_layer {
