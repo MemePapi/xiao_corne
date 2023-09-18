@@ -12,14 +12,15 @@
 #define COMBO_TIMEOUT 60
 
 #define DEFAULT 0
-#define NAV   1
-#define RAISE   2
-#define DANGER  3
-#define NUM     4
+#define NAV     1
+#define SYM     2
+#define NUM     3
+#define FUN		4
+#define DANGER  5
 
 / {
     macros {
-	hello: hello {
+		hello: hello {
             label = "hello";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -79,13 +80,11 @@
 
 &kscan0 {
 	debounce-period = <20>;
-	};
+};
 
 / {
 	behaviors {
-
-        bh: layer_taps 
-		{
+        bh: layer_taps{
 			compatible = "zmk,behavior-hold-tap";
 			label = "Layer-Tap";
 			#binding-cells = <2>;
@@ -93,8 +92,7 @@
             flavor = "tap-preferred";
 			bindings = <&mo>, <&kp>;
         };
-
-        hm: homerow_mods {
+        hm: homerow_mods{
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
@@ -103,7 +101,7 @@
             flavor = "tap-preferred";
             bindings = <&mt>, <&kp>;
         };
-		sm: shift_mods {
+		sm: shift_mods{
             compatible = "zmk,behavior-hold-tap";
             label = "SHIFT_MODS";
             #binding-cells = <2>;
@@ -113,18 +111,13 @@
             bindings = <&kp>, <&kp>;
         };
      };
-   };
-
+};
 / {
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
-// -----------------------------------------------------------------------------------------
-// |  Q  |  W  |  E  |  R  |  T          |   |  Y  |  U        |  I      |  O  |  P  | 
-// |  A  |  S  |  D  |  F  |  G          |   |  H  |  J        |  K      |  L  |  ;  |
-// |  Z  |  X  |  C  |  V  |  B          |   |  N  |  M        |  ,      |  .  |  /  | 
-//             | GUI | LWR |  BSPC/LSHFT |   | SPC | RSE/BSPC  | ENT/ALT |
+
                         bindings = <
    &kp Q       &kp W        &kp E        &kp R        &kp T        &kp Y     &kp U          &kp I         &kp O        &kp P
    &bh 1 A     &mt LALT S   &mt LCTRL D  &mt LSHFT F  &kp G        &kp H     &mt RSHFT J    &mt LCTRL K   &mt LALT L   &kp SQT
@@ -133,8 +126,8 @@
                         >;
 		label = "BASE";
                 };
+// 													NAV 1
                 nav_layer {
-//L 1
                         bindings = <
    &bt BT_SEL 0 &bt BT_SEL 1 &kp UP       &bt BT_SEL 2 &bt BT_CLR     &trans       &trans     &trans          &trans    &kp BSPC
    &kp F2       &kp LEFT     &kp DOWN     &kp RIGHT    &hm LGUI F6    &trans       &kp LSHFT  &kp LCTRL       &kp LALT  &kp LGUI
@@ -143,20 +136,28 @@
                         >;
 		label = "NAV";
                 };
-
-                raise_layer {
-//L 2
+//													SYM 2
+                symbol_layer {
                         bindings = <
    &kp EXCL  &kp AT    &kp HASH    &kp DLLR     &kp PRCNT     &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR 
    &kp TAB   &kp CAPS  &kp F13     &out OUT_TOG &kp LGUI      &kp MINUS &kp EQUAL &kp LBRC &kp RBRC &kp PIPE 
    &kp ESC   &kp GRAVE &kp QMARK   &kp F9       &kp F17       &kp UNDER &kp PLUS  &kp LBKT &kp RBKT &kp BSLH 
              &kp LCTRL &kp LALT    &mt LSHFT LS(INS)          &kp RET   &trans    &mt RALT TILDE
                         >;
-		label = "RAISE";
+		label = "SYM";
 		};
-		
-		danger_layer {
-//L 3
+//													NUM 3
+				num_layer {
+                        bindings = <
+	&bt BT_SEL 0 &bt BT_SEL 1 &kp UP       &bt BT_SEL 2 &bt BT_CLR          &kp PG_UP &kp N7 &kp N8 &kp N9  &kp BSPC
+	&kp F2       &kp LEFT     &kp DOWN     &kp RIGHT    &hm LGUI F6         &kp PG_DN &kp N4 &kp N5 &kp N6  &kp BSLH
+	&kp F7       &kp F8       &kp F10      &kp F11      &kp F12             &kp INS   &kp N1 &kp N2 &kp N3  &kp LC(RET)
+                &kp LC(LA(LSHFT)) &trans  &mt RALT RET                     &mt LCTRL F1  &kp N0  &mt LSHFT DOT
+                        >;
+		label = "NUM";
+                };
+//													DANGER 5
+				danger_layer {
                         bindings = <
    &bootloader  &kp AT &kp HASH       &kp PAUSE_BREAK &kp SLCK              &kp C_VOL_UP       &hm LC(V) LC(C)      &hello &kp LC(LA(DEL)) &bootloader 
    &trans       &trans &kp LC(LSHFT)  &mt LSHFT UP    &mt LCTRL PSCRN       &kp C_VOL_DN       &trans &trans        &kp UP &kp SEMI 
@@ -165,16 +166,9 @@
                         >;
                 label = "**DANGER**";
                 };
-
-                num_layer {
-//L4
-                        bindings = <
-   &bt BT_SEL 0 &bt BT_SEL 1 &kp UP       &bt BT_SEL 2 &bt BT_CLR          &kp PG_UP &kp N7 &kp N8 &kp N9  &kp BSPC
-   &kp F2       &kp LEFT     &kp DOWN     &kp RIGHT    &hm LGUI F6         &kp PG_DN &kp N4 &kp N5 &kp N6  &kp BSLH
-   &kp F7       &kp F8       &kp F10      &kp F11      &kp F12             &kp INS   &kp N1 &kp N2 &kp N3  &kp LC(RET)
-                &kp LC(LA(LSHFT)) &trans  &mt RALT RET                     &mt LCTRL F1  &kp N0  &mt LSHFT DOT
-                        >;
-		label = "NUM";
-                };
-        };
+// -----------------------------------------------------------------------------------------
+// |  Q  |  W  |  E  |  R  |  T          |   |  Y  |  U        |  I      |  O  |  P  | 
+// |  A  |  S  |  D  |  F  |  G          |   |  H  |  J        |  K      |  L  |  ;  |
+// |  Z  |  X  |  C  |  V  |  B          |   |  N  |  M        |  ,      |  .  |  /  | 
+//             | GUI | LWR |  BSPC/LSHFT |   | SPC | RSE/BSPC  | ENT/ALT |
 };
