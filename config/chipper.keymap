@@ -26,8 +26,8 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_tap_time 10>
-		,<&macro_tap &kp H &kp E &kp L &kp L &kp O>
-		;
+				,<&macro_tap &kp H &kp E &kp L &kp L &kp O>
+				;
         };
     };
 };
@@ -156,7 +156,7 @@
 				label = "NUM";
             };
 //													FUN 4
-				danger_layer {
+				function_layer {
                         bindings = <
 	&trans &trans &trans &trans &trans					&trans &trans &trans &trans &trans
 	&trans &trans &trans &trans &trans					&trans &trans &trans &trans &trans
