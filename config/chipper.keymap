@@ -98,7 +98,7 @@
             tapping-term-ms = <80>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&mt>, <&kp>;
+            bindings = <&mo>, <&kp>;
         };
 		sm: shift_mods{
             compatible = "zmk,behavior-hold-tap";
