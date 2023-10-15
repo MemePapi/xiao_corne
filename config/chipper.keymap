@@ -131,10 +131,10 @@
 // 													NAV 1
                 nav_layer {
                         bindings = <
-	&trans 		&kp PG_UP 	&kp UP			&kp PG_DOWN	&trans     		&trans       &trans     &trans          &trans    &kp BSPC
+	&trans 		&kp PG_UP 	&kp UP			&kp PG_DN	&trans     		&trans       &trans     &trans          &trans    &kp BSPC
 	&trans      &kp LEFT    &kp DOWN   	  	&kp RIGHT  	&trans			&trans       &kp LSHFT  &kp LCTRL       &kp LALT  &kp LGUI
 	&trans      &kp HOME    &trans      	&kp END    	&trans			&trans       &trans     &trans          &kp RALT  &trans
-               	&kp LC(LA(LSHFT)) &trans  	&mt RALT RET                   &kp BSPC  &kp SPACE  &kp DEL
+               	&kp LC(LA(LSHFT)) &trans  	&kp TAB                   &kp BSPC  &kp SPACE  &kp DEL
                         >;
 				label = "NAV";
             };
