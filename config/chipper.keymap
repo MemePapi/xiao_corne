@@ -87,7 +87,7 @@
 			compatible = "zmk,behavior-hold-tap";
 			label = "Layer-Tap";
 			#binding-cells = <2>;
-			tapping_term_ms = <130>;
+			tapping_term_ms = <200>;
             flavor = "tap-preferred";
 			bindings = <&mo>, <&kp>;
         };
@@ -104,7 +104,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "SHIFT_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <80>;
+            tapping-term-ms = <80>;q
             //quick_tap_ms = <0>;
             flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
@@ -119,19 +119,22 @@
 
                         bindings = <
 	&kp Q       &kp W        &kp E        &kp R        &kp T        &kp Y     &kp U          &kp I         &kp O        &kp P
-	&bh 1 A     &mt LALT S   &mt LCTRL D  &mt LSHFT F  &kp G        &kp H     &mt LSHFT J    &mt LCTRL K   &mt LALT L   &kp SQT
+	&bh 1 A     &hm LALT S   &hm LCTRL D  &hm LSHFT F  &kp G        &kp H     &hm LSHFT J    &hm LCTRL K   &hm	LALT L  &kp SQT
 	&mt LGUI Z  &kp X        &kp C        &kp V        &kp B        &kp N     &kp M          &kp COMMA     &kp DOT      &hm LGUI FSLH
-				&kp ESC &bh 1 RET &bh 3 TAB            &kp BSPC &bh 2 SPACE &bh 4 DEL
+	//&kp Q       &kp W        &kp F        &kp P        &kp G        &kp J     &kp L          &kp U         &kp Y        &kp SQT
+	//&bh 1 A     &hm LALT R   &hm LCTRL S  &hm LSHFT T  &kp D        &kp H     &hm LSHFT N    &hm LCTRL E   &hm LALT I   &kp O
+	//&mt LGUI Z  &kp X        &kp C        &kp V        &kp B        &kp K     &kp M          &kp COMMA     &kp DOT      &hm LGUI FSLH
+				&bh 2 ESC &bh 1 RET &bh 3 TAB            &kp BSPC &bh 2 SPACE &bh 4 DEL
                         >;
 				label = "BASE";
             };
 // 													NAV 1
                 nav_layer {
                         bindings = <
-	&bt BT_SEL 0 &bt BT_SEL 1 &kp UP       &bt BT_SEL 2 &bt BT_CLR     &trans       &trans     &trans          &trans    &kp BSPC
-	&kp F2       &kp LEFT     &kp DOWN     &kp RIGHT    &hm LGUI F6    &trans       &kp LSHFT  &kp LCTRL       &kp LALT  &kp LGUI
-	&kp F7       &kp F8       &kp F10      &kp F11      &kp F12        &trans       &trans     &trans          &kp RALT  &trans
-               	&kp LC(LA(LSHFT)) &trans  &mt RALT RET                   &mt LCTRL F1  &kp N0  &mt LSHFT DOT
+	&trans 		&kp PG_UP 	&kp UP       &kp PG_DOWN&trans     		&trans       &trans     &trans          &trans    &kp BSPC
+	&trans      &kp LEFT    &kp DOWN     &kp RIGHT  &trans		&trans       &kp LSHFT  &kp LCTRL       &kp LALT  &kp LGUI
+	&trans      &HOME      &trans      &END    &trans			&trans       &trans     &trans          &kp RALT  &trans
+               	&kp LC(LA(LSHFT)) &trans  &mt RALT RET                   &kp BSPC  &kp SPACE  &kp DEL
                         >;
 				label = "NAV";
             };
