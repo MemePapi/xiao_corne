@@ -119,7 +119,7 @@
                         bindings = <
 	&kp Q       &kp W        &kp F        &kp P        &kp G        &kp J     &kp L          &kp U         &kp Y        &kp SQT
 	&bh 1 A     &hm LALT R   &hm LCTRL S  &hm LSHFT T  &kp D        &kp H     &hm LSHFT N    &hm LCTRL E   &hm	LALT I  &kp O
-	&mt LGUI Z  &kp X        &kp C        &kp V        &kp B        &kp Y     &kp M          &kp COMMA     &kp DOT      &hm LGUI FSLH
+	&mt LGUI Z  &kp X        &kp C        &kp V        &kp B        &kp K     &kp M          &kp COMMA     &kp DOT      &hm LGUI FSLH
 //&kp Q       &kp W        &kp F        &kp P        &kp G        &kp J     &kp L          &kp U         &kp Y        &kp SQT
 //&bh 1 A     &hm LALT R   &hm LCTRL S  &hm LSHFT T  &kp D        &kp H     &hm LSHFT N    &hm LCTRL E   &hm LALT I   &kp O
 //&mt LGUI Z  &kp X        &kp C        &kp V        &kp B        &kp K     &kp M          &kp COMMA     &kp DOT      &hm LGUI FSLH
