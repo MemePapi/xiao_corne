@@ -117,12 +117,12 @@
 //													Base 0
                 default_layer {
                         bindings = <
-	&kp Q       &kp W        &kp E        &kp R        &kp T        &kp Y     &kp U          &kp I         &kp O        &kp P
-	&bh 1 A     &hm LALT S   &hm LCTRL D  &hm LSHFT F  &kp G        &kp H     &hm LSHFT J    &hm LCTRL K   &hm LALT L   &kp SQT
-	&mt LGUI Z  &kp X        &kp C        &kp V        &kp B        &kp N     &kp M          &kp COMMA     &kp DOT      &hm LGUI FSLH
-//&kp Q       &kp W        &kp F        &kp P        &kp G        &kp J     &kp L          &kp U         &kp Y        &kp SQT
-//&bh 1 A     &hm LALT R   &hm LCTRL S  &hm LSHFT T  &kp D        &kp H     &hm LSHFT N    &hm LCTRL E   &hm LALT I   &kp O
-//&mt LGUI Z  &kp X        &kp C        &kp V        &kp B        &kp K     &kp M          &kp COMMA     &kp DOT      &hm LGUI FSLH
+//&kp Q       &kp W        &kp E        &kp R        &kp T        &kp Y     &kp U          &kp I         &kp O        &kp P
+//	&bh 1 A     &hm LALT S   &hm LCTRL D  &hm LSHFT F  &kp G        &kp H     &hm LSHFT J    &hm LCTRL K   &hm LALT L   &kp SQT
+//	&mt LGUI Z  &kp X        &kp C        &kp V        &kp B        &kp N     &kp M          &kp COMMA     &kp DOT      &hm LGUI FSLH
+	&kp Q       &kp W        &kp F        &kp P        &kp G        &kp J     &kp L          &kp U         &kp Y        &kp SQT
+	&bh 1 A     &hm LALT R   &hm LCTRL S  &hm LSHFT T  &kp D        &kp H     &hm LSHFT N    &hm LCTRL E   &hm LALT I   &kp O
+	&mt LGUI Z  &kp X        &kp C        &kp V        &kp B        &kp K     &kp M          &kp COMMA     &kp DOT      &hm LGUI FSLH
 				&bh 2 ESC &bh 1 RET &bh 3 TAB            &kp BSPC &bh 2 SPACE &bh 4 DEL
                         >;
 				label = "BASE";
