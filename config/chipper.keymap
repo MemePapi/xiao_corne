@@ -117,7 +117,7 @@
 //													Base 0
                 default_layer {
                         bindings = <
-//&kp Q       &kp W        &kp E        &kp R        &kp T        &kp Y     &kp U          &kp I         &kp O        &kp P
+//	&kp Q       &kp W        &kp E        &kp R        &kp T        &kp Y     &kp U          &kp I         &kp O        &kp P
 //	&bh 1 A     &hm LALT S   &hm LCTRL D  &hm LSHFT F  &kp G        &kp H     &hm LSHFT J    &hm LCTRL K   &hm LALT L   &kp SQT
 //	&mt LGUI Z  &kp X        &kp C        &kp V        &kp B        &kp N     &kp M          &kp COMMA     &kp DOT      &hm LGUI FSLH
 	&kp Q       &kp W        &kp F        &kp P        &kp G        &kp J     &kp L          &kp U         &kp Y        &kp SQT
@@ -150,10 +150,10 @@
 //													NUM 3
 				num_layer {
                         bindings = <
-	&bt BT_SEL 0 &bt BT_SEL 1 &kp UP      &bt BT_SEL 2 &bt BT_CLR        	&kp PG_UP &kp N7 &kp N8 &kp N9  &kp MINUS
-	&trans       &kp LEFT     &kp LCTRL   &kp LSHFT    &trans         		&kp SLASH &kp N4 &kp N5 &kp N6  &kp PLUS
-	&trans       &trans       &trans      &trans       &trans        	 	&kp INS   &kp N1 &kp N2 &kp N3  &kp EQUAL
-                &kp LC(LA(LSHFT)) &trans  &mt RALT RET                     		&kp RET  &kp N0  &kp DOT
+	&bt BT_SEL 0 &bt BT_SEL 1 &kp UP      &bt BT_SEL 2 &bt BT_CLR        	&kp SLASH		&kp N7 &kp N8 &kp N9  &kp MINUS
+	&trans       &kp LEFT     &kp LCTRL   &kp LSHFT    &trans         		&kp KP_MULTIPLY	&kp N4 &kp N5 &kp N6  &kp PLUS
+	&trans       &trans       &trans      &trans       &trans        	 	&kp N0  		&kp N1 &kp N2 &kp N3  &kp DOT
+                &kp LC(LA(LSHFT)) &trans  &mt RALT RET                     		&kp RET  &kp DOT  &kp DOT
                         >;
 				label = "NUM";
             };
